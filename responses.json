@@ -1,0 +1,9 @@
+{
+  "welcome": "Olá! Bem-vindo ao Chatbot do Intituto Bourbon de Educação.",
+  "menu": "Por favor, escolha uma das opções abaixo:\n1. Informações sobre cursos\n2. Marcar reposição\n3. Fazer pagamentos\n4. Sair",
+  "informacoes_cursos": "Temos os seguintes cursos disponíveis: Matemática, Ciências, História e Inglês. Para mais detalhes, entre em contato com a secretaria.",
+  "marcar_reposicao": "Para marcar uma reposição, por favor, informe o dia e a hora desejada.",
+  "fazer_pagamentos": "Para fazer pagamentos, acesse nosso site em www.escolaxyz.com/pagamentos ou entre em contato com a secretaria.",
+  "sair": "Até logo! Volte sempre.",
+  "default": "Desculpe, não entendi sua mensagem. Por favor, escolha uma das opções do menu."
+}
