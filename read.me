@@ -1,0 +1,43 @@
+1. Requisitos do Programa
+Aqui está a lista completa dos requisitos para reconstruir o chatbot:
+
+Funcionalidades Principais:
+Integração com WhatsApp :
+Usar o módulo whatsapp-web.js para enviar e receber mensagens.
+Manter a sessão persistente para evitar a necessidade de escanear o QR Code toda vez.
+Gerenciamento de Estados das Conversas :
+Armazenar estados das conversas em um arquivo JSON (conversations.json).
+Persistir dados como contexto, última interação e informações fornecidas pelo usuário.
+Fluxo de Conversa Hierárquico :
+Cada etapa do fluxo deve ser representada como um nível hierárquico em um objeto JSON.
+A classe de gerenciamento de conversas deve recuperar o estado atual, analisá-lo e retornar a próxima mensagem.
+Exibição de Menu :
+Exibir um menu apenas na primeira interação do usuário.
+Encerramento Automático :
+Encerrar a sessão após 5 minutos de inatividade.
+Personalização via JSON :
+Todas as mensagens e metadados devem estar no arquivo responses.json.
+Gerenciador de Logs :
+Registrar logs detalhados no terminal para monitorar o fluxo do programa em tempo real.
+Modularidade :
+Separar responsabilidades em classes e arquivos distintos.
+Boas Práticas de Desenvolvimento :
+Seguir princípios como SRP (Single Responsibility Principle), DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid).
+
+/chatbot
+  ├── src/
+  │   ├── bot/
+  │   │   ├── Bot.js          # Classe principal do chatbot
+  │   │   ├── ConversationManager.js # Gerenciamento avançado de conversas
+  │   │   ├── Responses.js    # Manipulação do arquivo responses.json
+  │   │   ├── WhatsAppClient.js # Integração com o WhatsApp
+  │   ├── utils/
+  │   │   ├── FileHandler.js  # Manipulação de arquivos JSON
+  │   │   ├── Logger.js       # Gerenciador de logs
+  │   │   ├── Timer.js        # Lógica de timeout para encerrar sessões
+  ├── data/
+  │   ├── responses.json      # Mensagens e metadados personalizados
+  │   ├── conversations.json  # Estados das conversas
+  │   ├── session.json        # Sessão persistente do WhatsApp
+  ├── app.js                  # Ponto de entrada do programa
+  ├── package.json            # Dependências do projeto

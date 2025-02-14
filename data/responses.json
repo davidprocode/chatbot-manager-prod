@@ -1,8 +1,10 @@
 {
-  "welcome": "Olá! Bem-vindo ao Chatbot do Intituto Bourbon de Educação.",
+  "welcome": "Olá! Bem-vindo ao Chatbot da Escola XYZ.",
   "menu": "Por favor, escolha uma das opções abaixo:\n1. Informações sobre cursos\n2. Marcar reposição\n3. Fazer pagamentos\n4. Sair",
   "informacoes_cursos": "Temos os seguintes cursos disponíveis: Matemática, Ciências, História e Inglês. Para mais detalhes, entre em contato com a secretaria.",
-  "marcar_reposicao": "Para marcar uma reposição, por favor, informe o dia e a hora desejada.",
+  "marcar_reposicao_inicio": "Para marcar uma reposição, por favor, informe o dia desejado (ex.: 10/10/2023).",
+  "marcar_reposicao_hora": "Agora, informe a hora desejada (ex.: 14:00).",
+  "marcar_reposicao_confirmacao": "Sua aula será marcada para {dia} às {hora}.",
   "fazer_pagamentos": "Para fazer pagamentos, acesse nosso site em www.escolaxyz.com/pagamentos ou entre em contato com a secretaria.",
   "sair": "Até logo! Volte sempre.",
   "default": "Desculpe, não entendi sua mensagem. Por favor, escolha uma das opções do menu."
