@@ -1,20 +1,16 @@
 const WhatsAppClient = require("./src/bot/WhatsAppClient");
 const ConversationManager = require("./src/bot/ConversationManager");
-const Responses = require("./src/bot/Responses");
 
-const responsesPath = "./data/responses.json";
-const conversationsPath = "../../data/conversations.json";
-const sessionPath = "./data/session.json";
+const conversationManager = new ConversationManager();
 
-const responses = new Responses(responsesPath);
-const conversationManager = new ConversationManager(
-  conversationsPath,
-  responses
-);
-const client = new WhatsAppClient(sessionPath);
+const client = new WhatsAppClient();
 
 client.initialize();
-client.onMessage((userId, userInput) => {
-  const response = conversationManager.getNextMessage(userId, userInput);
+
+client.onMessage(async (userId, userInput) => {
+  const response = await conversationManager.getNextMessage(userId, userInput);
+  console.log(
+    `userId:${userId} - userInput:${userInput} - response:${response}`
+  );
   client.sendMessage(userId, response);
 });
