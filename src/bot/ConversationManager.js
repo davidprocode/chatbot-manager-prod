@@ -2,10 +2,11 @@ const fs = require("fs");
 
 const Timer = require("../utils/Timer");
 const FileHandler = require("../utils/FileHandler");
+const conversationsPath = "../data/conversations.json"
 
 class ConversationManager {
   getState(userId) {
-    const currentState = FileHandler.read("../data/conversations.json");
+    const currentState = FileHandler.read(conversationsPath);
     return currentState[userId];
   }
 
@@ -16,7 +17,7 @@ class ConversationManager {
       ...newState,
       lastInteraction: new Date().toISOString(),
     };
-    this.saveConversations();
+    FileHandler.write(conversationsPath, )
   }
 
   getNextMessage(userId, userInput) {
